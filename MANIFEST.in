@@ -1,0 +1,4 @@
+include README.md
+recursive-include octoprint_buddycam/templates *
+recursive-include octoprint_buddycam/translations *
+recursive-include octoprint_buddycam/static *
