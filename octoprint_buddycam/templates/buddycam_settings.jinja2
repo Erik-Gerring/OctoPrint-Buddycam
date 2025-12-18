@@ -1,0 +1,58 @@
+<div class="control-group">
+  <label class="control-label">RTSP / Input URL</label>
+  <div class="controls">
+    <input type="text" class="input-block-level" data-bind="value: settings.plugins.buddycam.input_url">
+    <p class="help-block">Example: rtsp://user:pass@192.168.1.50:554/stream</p>
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label">FFmpeg path</label>
+  <div class="controls">
+    <input type="text" class="input-block-level" data-bind="value: settings.plugins.buddycam.ffmpeg_path">
+    <p class="help-block">Usually <code>ffmpeg</code> or <code>/usr/bin/ffmpeg</code>.</p>
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label">RTSP transport</label>
+  <div class="controls">
+    <select class="input-medium" data-bind="value: settings.plugins.buddycam.rtsp_transport">
+      <option value="tcp">tcp</option>
+      <option value="udp">udp</option>
+    </select>
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label">Timeout (seconds)</label>
+  <div class="controls">
+    <input type="number" class="input-small" min="1" data-bind="value: settings.plugins.buddycam.timeout_sec">
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label">Cache TTL (ms)</label>
+  <div class="controls">
+    <input type="number" class="input-small" min="0" data-bind="value: settings.plugins.buddycam.cache_ttl_ms">
+    <p class="help-block">Set to 0 to disable caching.</p>
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label">Extra FFmpeg input args</label>
+  <div class="controls">
+    <input type="text" class="input-block-level" data-bind="value: settings.plugins.buddycam.extra_input_args">
+    <p class="help-block">Advanced flags, space-separated (optional).</p>
+  </div>
+</div>
+
+<div class="control-group">
+  <label class="control-label">Allow last-good fallback</label>
+  <div class="controls">
+    <label class="checkbox">
+      <input type="checkbox" data-bind="checked: settings.plugins.buddycam.allow_last_good">
+      Serve the most recent good frame if capture fails
+    </label>
+  </div>
+</div>

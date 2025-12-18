@@ -13,6 +13,8 @@ class BuddycamPlugin(
     octoprint.plugin.SettingsPlugin,
     octoprint.plugin.BlueprintPlugin,
     octoprint.plugin.StartupPlugin,
+    octoprint.plugin.TemplatePlugin,
+    octoprint.plugin.AssetPlugin,
 ):
     """
     OctoPrint-facing plugin class.
@@ -40,6 +42,11 @@ class BuddycamPlugin(
             # Behaviour toggles
             allow_last_good=True,
         )
+    
+    def get_template_configs(self):
+        return [
+            dict(type="settings", custom_bindings=False),
+        ]
 
     def on_after_startup(self):
         self._logger.info("Buddycam: plugin loaded")
