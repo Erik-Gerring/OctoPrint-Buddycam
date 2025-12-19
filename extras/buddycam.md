@@ -3,17 +3,16 @@ layout: plugin
 
 id: buddycam
 title: OctoPrint-Buddycam
-description: TODO
+description: FFmpeg-backed RTSP snapshot endpoint for OctoPrint
 authors:
 - Erik-Gerring
 license: AGPL-3.0-or-later
 
-# TODO
-date: today's date in format YYYY-MM-DD, e.g. 2015-04-21
+date: 2025-12-19
 
 homepage: https://github.com/Erik-Gerring/OctoPrint-Buddycam
 source: https://github.com/Erik-Gerring/OctoPrint-Buddycam
-archive: https://github.com/Erik-Gerring/OctoPrint-Buddycam/archive/main.zip
+archive: https://github.com/Erik-Gerring/OctoPrint-Buddycam/archive/refs/heads/main.zip
 
 # TODO
 # Set this to true if your plugin uses the dependency_links setup parameter to include
@@ -22,11 +21,10 @@ archive: https://github.com/Erik-Gerring/OctoPrint-Buddycam/archive/main.zip
 
 # TODO
 tags:
-- a list
-- of tags
-- that apply
-- to your plugin
-- (take a look at the existing plugins for what makes sense here)
+- camera
+- snapshot
+- rtsp
+- ffmpeg
 
 # TODO
 # When registering a plugin on plugins.octoprint.org, all screenshots should be uploaded not linked from external sites.
@@ -105,5 +103,10 @@ attributes:
 
 ---
 
-**TODO**: Longer description of your plugin, configuration examples etc. This part will be visible on the page at
-http://plugins.octoprint.org/plugin/buddycam/
+Buddycam is an OctoPrint plugin that exposes a stable HTTP snapshot endpoint backed by FFmpeg and RTSP/IP cameras.
+
+Snapshot URL:
+
+- `/plugin/buddycam/snapshot`
+
+Configuration is available in OctoPrint Settings under "Buddycam".
