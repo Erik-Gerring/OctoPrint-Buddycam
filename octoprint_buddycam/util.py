@@ -15,6 +15,12 @@ def is_jpeg(Data):
     return Data.startswith(_JPEG_SOI) and Data.endswith(_JPEG_EOI)
 
 
+# Backwards-compatible alias.
+# Some parts of the plugin expect this name.
+def is_probably_jpeg(Data):
+    return is_jpeg(Data)
+
+
 def redact_url_credentials(Url):
     """
     Redact credentials in URLs for safe logging.
